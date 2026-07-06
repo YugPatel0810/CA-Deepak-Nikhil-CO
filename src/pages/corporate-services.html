@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deepak Nikhil & Co. — Corporate Services" />
+  <link rel="icon" type="image/png" href="/src/pictures/favicon.png" />
+  <title>Deepak Nikhil & Co. - Corporate Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body class="bg-surface-base text-text-primary overflow-x-hidden" style="margin: 0; min-height: 100vh;">
+  <!-- WEBGL CANVAS -->
+  <canvas id="webgl-canvas" aria-hidden="true"></canvas>
+
+  <!-- Overlay Menu -->
+  <div id="overlay-menu" class="overlay-menu">
+    <button id="close-menu" style="position:absolute; top:30px; right:30px; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">&times;</button>
+    <nav class="overlay-nav">
+      <a href="/" class="overlay-link">Home</a>
+      <a href="/#services" class="overlay-link">Services</a>
+      <a href="/#partners" class="overlay-link">Partners</a>
+      <a href="/#contact" class="overlay-link">Contact Us</a>
+    </nav>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav" class="fixed top-0 left-0 w-full flex items-center justify-between"
+    style="padding: 16px 32px; z-index: 50; font-family: var(--font-family-ui)" role="navigation" aria-label="Primary">
+    <a href="/" class="uppercase font-semibold flex items-center"
+      style="font-size: 12px; letter-spacing: 0.15em; color: #1A1A1A; gap: 8px; text-decoration: none;">
+      <img src="/src/pictures/ca.png" alt="CA India Logo"
+        style="height: 80px; width: auto; display: inline-block; max-width: 250px; object-fit: contain;" />
+    </a>
+    <button id="menu-btn" class="uppercase font-semibold cursor-pointer bg-transparent border-none hover:text-[#C9A96E]"
+      style="font-size: 12px; letter-spacing: 0.15em; color: #1A1A1A; transition: color 300ms ease;"
+      aria-label="Toggle navigation menu" type="button">
+      <span id="menu-text" class="inline-block transition-transform duration-300">
+        MENU [≡]
+      </span>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header style="padding: 15vh 32px 10vh 32px; z-index: 10; position: relative;">
+    <h1 class="font-serif italic font-medium text-text-primary"
+      style="font-size: clamp(60px, 8vw, 120px); line-height: 0.9; letter-spacing: -0.02em; margin-bottom: 24px;">
+      Corporate<br />Services
+    </h1>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 20px; color: var(--color-brand-blue); max-width: 800px; font-weight: 600; line-height: 1.5; margin-bottom: 48px;">
+      End-to-end corporate structuring, from formation and regulatory compliance to ongoing legal stewardship.
+    </p>
+  </header>
+
+  <!-- DETAILED EXPLANATION -->
+  <section style="padding: 5vh 32px; max-width: 800px; margin: 0 auto; z-index: 10; position: relative;">
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">The Essential Why</h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 40px;">
+      Choosing the right legal and corporate structure at the outset is one of the most consequential decisions any
+      entrepreneur or business owner makes. Whether you are incorporating a Private Limited Company, forming a Limited
+      Liability Partnership (LLP), or registering a branch, the structure you choose governs your tax exposure, personal
+      liability, compliance burden, and ability to raise capital. In India, corporate formation and ongoing compliance
+      are regulated by the Companies Act, 2013 and the LLP Act, 2008, administered by the Ministry of Corporate Affairs
+      (MCA). Errors in structure selection, defective documentation, delayed annual filings, or missed ROC returns
+      attract penalties that can run into lakhs - and permanently impair the credibility of your entity with banks,
+      investors, and regulators.
+    </p>
+
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">Our Approach & Expertise
+    </h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 40px;">
+      CA Deepak Nikhil & Co. provides end-to-end corporate services - from entity formation to ongoing legal
+      stewardship. We handle company registration, branch formation, and LLP incorporation through the MCA portal,
+      advise on the most suitable structure for your specific business model and long-term goals, and draft legally
+      sound LLP Agreements defining partner rights, duties, and profit-sharing ratios. Our company law compliance
+      service covers annual returns, Form 8 and Form 11 filings for LLPS, ROC submissions, statutory register
+      maintenance, and board and shareholder resolutions. We ensure your corporate entity is correctly structured,
+      properly documented, and fully compliant - from the date of incorporation through every annual cycle thereafter.
+    </p>
+
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">The Tangible Benefit</h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 48px;">
+      Businesses structured with our guidance carry strong legal standing, protected personal liability, and full
+      regulatory compliance from day one. Our clients avoid the most costly corporate pitfalls name rejections,
+      documentation deficiencies, missed filing deadlines, and non-compliance penalties - and instead build a credible,
+      well-governed corporate foundation that inspires confidence in banks, investors, vendors, and government
+      authorities. When your company's compliance record is clean, every future transaction financing, expansion, or
+      sale - proceeds on the strongest possible footing.
+    </p>
+  </section>
+
+  <!-- SUB-SERVICES -->
+  <section style="padding: 10vh 32px; background-color: rgba(27, 90, 140, 0.03); z-index: 10; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="font-serif italic" style="font-size: 40px; color: var(--color-brand-blue); margin-bottom: 48px;">
+        Explore Sub-Services</h2>
+
+      <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0;">
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Company Registration</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Branch Formation</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Company Law</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          LLP Formation</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Company Annual Returns</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Company Management</li>
+      </ul>
+    </div>
+  </section>
+
+  <div style="text-align: center; padding: 12vh 20px;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #0B2B5E; margin-bottom: 30px; font-weight: 400; font-style: italic;">Ready to Elevate Your Strategy?</h2>
+  <a href="/index.html#lets-connect" style="background-color: #C5A059; color: #1A1A1A; padding: 14px 36px; text-decoration: none; font-weight: 600; font-family: sans-serif; letter-spacing: 1px; border-radius: 4px; display: inline-block; transition: opacity 0.3s;">BOOK A CONSULTATION</a>
+</div>
+<script type="module" src="/src/main.ts"></script>
+  <footer style="background: #0a0a0a; padding: 60px 32px 20px; text-align: center; color: #5A5A5A; font-family: sans-serif; font-size: 13px; border-top: 1px solid #222;">
+    <h3 style="font-family: 'Playfair Display', serif; color: #fff; font-size: 24px; font-weight: 400; margin-bottom: 10px;">CA Deepak Nikhil & Co.</h3>
+    <p style="margin-bottom: 30px;">Focused financial acumen and strategic advisory.</p>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+      <span>&copy; 2026 CA Deepak Nikhil & Co. All rights reserved.</span>
+      <span>Dholka, Gujarat</span>
+    </div>
+  </footer>
+</body>
+
+</html>
+

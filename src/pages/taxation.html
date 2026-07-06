@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deepak Nikhil & Co. — Taxation" />
+  <link rel="icon" type="image/png" href="/src/pictures/favicon.png" />
+  <title>Deepak Nikhil & Co. - Taxation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body class="bg-surface-base text-text-primary overflow-x-hidden" style="margin: 0; min-height: 100vh;">
+  <!-- WEBGL CANVAS -->
+  <canvas id="webgl-canvas" aria-hidden="true"></canvas>
+
+  <!-- Overlay Menu -->
+  <div id="overlay-menu" class="overlay-menu">
+    <button id="close-menu" style="position:absolute; top:30px; right:30px; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">&times;</button>
+    <nav class="overlay-nav">
+      <a href="/" class="overlay-link">Home</a>
+      <a href="/#services" class="overlay-link">Services</a>
+      <a href="/#partners" class="overlay-link">Partners</a>
+      <a href="/#contact" class="overlay-link">Contact Us</a>
+    </nav>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav" class="fixed top-0 left-0 w-full flex items-center justify-between"
+    style="padding: 16px 32px; z-index: 50; font-family: var(--font-family-ui)" role="navigation" aria-label="Primary">
+    <a href="/" class="uppercase font-semibold flex items-center"
+      style="font-size: 12px; letter-spacing: 0.15em; color: #1A1A1A; gap: 8px; text-decoration: none;">
+      <img src="/src/pictures/ca.png" alt="CA India Logo"
+        style="height: 80px; width: auto; display: inline-block; max-width: 250px; object-fit: contain;" />
+    </a>
+    <button id="menu-btn" class="uppercase font-semibold cursor-pointer bg-transparent border-none hover:text-[#C9A96E]"
+      style="font-size: 12px; letter-spacing: 0.15em; color: #1A1A1A; transition: color 300ms ease;"
+      aria-label="Toggle navigation menu" type="button">
+      <span id="menu-text" class="inline-block transition-transform duration-300">
+        MENU [≡]
+      </span>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header style="padding: 15vh 32px 10vh 32px; z-index: 10; position: relative;">
+    <h1 class="font-serif italic font-medium text-text-primary"
+      style="font-size: clamp(60px, 8vw, 120px); line-height: 0.9; letter-spacing: -0.02em; margin-bottom: 24px;">
+      Taxation
+    </h1>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 20px; color: var(--color-brand-blue); max-width: 800px; font-weight: 600; line-height: 1.5; margin-bottom: 48px;">
+      Expert tax planning and compliance frameworks designed to optimize liability across complex regulatory landscapes.
+    </p>
+  </header>
+
+  <!-- DETAILED EXPLANATION -->
+  <section style="padding: 5vh 32px; max-width: 800px; margin: 0 auto; z-index: 10; position: relative;">
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">The Essential Why</h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 40px;">
+      India's tax framework is one of the most dynamic and multifaceted in the world- spanning income tax, corporate
+      tax, GST, TDS, direct taxes, indirect taxes, and frequent legislative amendments that demand constant vigilance.
+      Non-compliance is costly: missed deadlines attract penalties and interest, incorrect deductions trigger
+      reassessments, and unresolved tax disputes consume management bandwidth for years. At the same time, India's tax
+      laws contain a wide range of legitimate planning opportunities - deductions, exemptions, rebates, investment
+      incentives, and structuring strategies - that most businesses never fully capitalize on without professional
+      guidance. Effective tax planning is not about avoidance; it is about paying the right amount, at the right time,
+      through entirely lawful and strategically sound decisions that free up capital for reinvestment and growth.
+    </p>
+
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">Our Approach & Expertise
+    </h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 40px;">
+      CA Deepak Nikhil & Co. offers comprehensive taxation services spanning the full spectrum of India's tax landscape.
+      We handle income tax filing and planning for individuals, Hindu Undivided Families (HUFs), partnership firms, and
+      companies, covering everything from return preparation to strategic tax planning through permissible exemptions
+      and deductions. Our corporate tax planning service analyzes your business transactions, investments, and income
+      structure to minimize tax liability within the bounds of the law. We manage complete direct and indirect tax
+      compliance - including GST registration, return filing, ITC reconciliation, and TDS management. When disputes
+      arise with tax authorities, our litigation practice provides strong representation at every appellate level: from
+      responding to assessment orders and show-cause notices, to filing appeals before the Commissioner, ITAT, and
+      beyond.
+    </p>
+
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">The Tangible Benefit</h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 48px;">
+      Businesses and individuals who partner with us for taxation consistently achieve meaningful reductions in
+      legitimate tax outflow through proactive planning, clean compliance records with zero penalties, and confident
+      representation in cases of notices or disputes. Your tax strategy transforms from a reactive obligation into a
+      proactive financial advantage one that preserves capital, avoids regulatory friction, and allows you to invest
+      your savings into the future of your business with complete legal confidence.
+    </p>
+  </section>
+
+  <!-- SUB-SERVICES -->
+  <section style="padding: 10vh 32px; background-color: rgba(27, 90, 140, 0.03); z-index: 10; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="font-serif italic" style="font-size: 40px; color: var(--color-brand-blue); margin-bottom: 48px;">
+        Explore Sub-Services</h2>
+
+      <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0;">
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Income Tax</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Corporate Tax Planning</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Direct Tax</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Indirect Tax</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Litigations</li>
+      </ul>
+    </div>
+  </section>
+
+  <div style="text-align: center; padding: 12vh 20px;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #0B2B5E; margin-bottom: 30px; font-weight: 400; font-style: italic;">Ready to Elevate Your Strategy?</h2>
+  <a href="/index.html#lets-connect" style="background-color: #C5A059; color: #1A1A1A; padding: 14px 36px; text-decoration: none; font-weight: 600; font-family: sans-serif; letter-spacing: 1px; border-radius: 4px; display: inline-block; transition: opacity 0.3s;">BOOK A CONSULTATION</a>
+</div>
+<script type="module" src="/src/main.ts"></script>
+  <footer style="background: #0a0a0a; padding: 60px 32px 20px; text-align: center; color: #5A5A5A; font-family: sans-serif; font-size: 13px; border-top: 1px solid #222;">
+    <h3 style="font-family: 'Playfair Display', serif; color: #fff; font-size: 24px; font-weight: 400; margin-bottom: 10px;">CA Deepak Nikhil & Co.</h3>
+    <p style="margin-bottom: 30px;">Focused financial acumen and strategic advisory.</p>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+      <span>&copy; 2026 CA Deepak Nikhil & Co. All rights reserved.</span>
+      <span>Dholka, Gujarat</span>
+    </div>
+  </footer>
+</body>
+
+</html>
+

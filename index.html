@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="/src/pictures/favicon.png">
+  <title>CA Deepak Nikhil & Co. | Chartered Accountants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,700&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Montserrat:wght@400;600&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-surface-base text-text-primary overflow-x-hidden" style="margin: 0; min-height: 100vh;">
+
+
+  <!-- ═══════════════════════════════════════════════════════
+         WEBGL CANVAS — Fixed background, z-index: -10
+         ═══════════════════════════════════════════════════════ -->
+  <canvas id="webgl-canvas" aria-hidden="true"></canvas>
+
+  <!-- ═══════════════════════════════════════════════════════
+         NAVIGATION — Fixed top
+         ═══════════════════════════════════════════════════════ -->
+  <nav id="main-nav" class="fixed top-0 left-0 w-full flex items-center justify-between"
+    style="padding: 16px 32px; z-index: 50; font-family: var(--font-family-ui)" role="navigation" aria-label="Primary">
+    <span class="uppercase font-semibold flex items-center"
+      style="font-size: 12px; letter-spacing: 0.15em; color: #1A1A1A; gap: 8px">
+      <img src="/src/pictures/ca.png" alt="CA India Logo"
+        style="height: 80px; width: auto; display: inline-block; max-width: 250px; object-fit: contain;">
+
+    </span>
+    <button id="menu-btn" class="uppercase font-semibold cursor-pointer bg-transparent border-none hover:text-[#C9A96E]"
+      style="font-size: 12px; letter-spacing: 0.15em; color: #1A1A1A; transition: color 300ms ease;"
+      aria-label="Toggle navigation menu" type="button">
+      <span id="menu-text" class="inline-block transition-transform duration-300">
+        MENU [≡]
+      </span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+         HERO — 100vh, bottom-aligned, display typography
+         ═══════════════════════════════════════════════════════ -->
+  <header id="hero" class="relative w-full flex flex-col justify-end" style="height: 100vh; padding: 180px 32px 32px !important; z-index: 10">
+    <h1 class="font-serif italic font-medium text-text-primary glass-text" style="
+          font-size: 8vw;
+          line-height: 0.85;
+          letter-spacing: -0.02em;
+          text-shadow: 0 2px 40px rgba(27, 90, 140, 0.15);
+        ">
+      <span class="hero-word">Elevate</span><br>
+      <span class="hero-word">Your</span>
+      <span class="hero-word">Business</span>
+    </h1>
+
+    <p style="font-family: var(--font-family-ui); font-size: 22px; color: var(--color-brand-blue); font-weight: bold; max-width: 650px; margin-top: 40px; margin-bottom: 24px; line-height: 1.6;"
+      class="hero-word glass-text">
+      Established in 2016, CA Deepak Nikhil &amp; Co. brings focused financial acumen and strategic advisory to
+      businesses
+      across multiple sectors. Rooted in Dholka, driven by excellence.
+    </p>
+
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+         KINETIC MARQUEE — Infinite horizontal scroll
+         ═══════════════════════════════════════════════════════ -->
+  <section id="marquee" class="marquee-wrapper" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-text"><span class="marquee-separator">///</span> REAL ESTATE <span
+          class="marquee-separator">///</span> EDUCATION <span class="marquee-separator">///</span> MANUFACTURING
+        <span class="marquee-separator">///</span> PROFESSIONALS <span class="marquee-separator">///</span> TRADING
+        <span class="marquee-separator">///</span> FOOD &amp; HOSPITALITY <span class="marquee-separator">///</span>
+        TRAVEL
+        &amp; LOGISTICS&nbsp;</span>
+      <span class="marquee-text"><span class="marquee-separator">///</span> REAL ESTATE <span
+          class="marquee-separator">///</span> EDUCATION <span class="marquee-separator">///</span> MANUFACTURING
+        <span class="marquee-separator">///</span> PROFESSIONALS <span class="marquee-separator">///</span> TRADING
+        <span class="marquee-separator">///</span> FOOD &amp; HOSPITALITY <span class="marquee-separator">///</span>
+        TRAVEL
+        &amp; LOGISTICS&nbsp;</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+         COMPREHENSIVE SERVICES GRID — 5 Categories
+         ═══════════════════════════════════════════════════════ -->
+  <section id="services" style="padding: 20vh 32px; z-index: 10; position: relative" aria-label="Our Services">
+    <h2 class="font-serif italic" style="font-size: 48px; color: var(--color-brand-blue); margin-bottom: 48px;">Our Core
+      Services</h2>
+
+    <!-- 01 — Management Consultancy -->
+    <div class="service-row" tabindex="0" role="button" aria-expanded="false"
+      onclick="window.location.href='/src/pages/management-consultancy.html'">
+      <span class="service-num text-text-secondary font-semibold">01</span>
+      <div class="service-main" style="flex: 1;">
+        <span class="service-title text-text-primary transition-colors duration-300 hover:text-brand-orange"
+          style="display: block;">Management Consultancy</span>
+        <ul class="service-sub-tags" style="list-style: none; padding: 0;">
+          <li class="service-sub-tag">Strategic Advisory</li>
+          <li class="service-sub-tag">Fundflow Management</li>
+          <li class="service-sub-tag">Virtual CFO Services</li>
+          <li class="service-sub-tag">Due Diligence</li>
+          <li class="service-sub-tag">Business Evaluation</li>
+          <li class="service-sub-tag">CMA Reports</li>
+        </ul>
+      </div>
+      <div class="service-desc" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+        <span class="text-text-secondary font-semibold glass-text" style="text-align: right;">Strategic guidance to
+          optimize operations, enhance efficiency, and drive sustainable growth for your enterprise.</span>
+        <a href="/src/pages/management-consultancy.html"
+          class="text-brand-blue font-semibold uppercase hover:text-brand-orange"
+          style="font-size: 12px; letter-spacing: 0.1em; transition: color 300ms ease;">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- 02 — Accounting -->
+    <div class="service-row" tabindex="0" role="button" aria-expanded="false"
+      onclick="window.location.href='/src/pages/accounting.html'">
+      <span class="service-num text-text-secondary font-semibold">02</span>
+      <div class="service-main" style="flex: 1;">
+        <span class="service-title text-text-primary transition-colors duration-300 hover:text-brand-orange"
+          style="display: block;">Accounting</span>
+        <ul class="service-sub-tags" style="list-style: none; padding: 0;">
+          <li class="service-sub-tag">Bookkeeping</li>
+          <li class="service-sub-tag">TDS and TCS Compliance</li>
+          <li class="service-sub-tag">GST Compliance</li>
+          <li class="service-sub-tag">TAN and PAN Services</li>
+          <li class="service-sub-tag">Partner Deed and LLP Deed</li>
+          <li class="service-sub-tag">HUF Deed</li>
+          <li class="service-sub-tag">Tax Planning</li>
+          <li class="service-sub-tag">Accounting Review</li>
+          <li class="service-sub-tag">Bank Reconciliation</li>
+          <li class="service-sub-tag">Transitional Advisory</li>
+        </ul>
+      </div>
+      <div class="service-desc" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+        <span class="text-text-secondary font-semibold glass-text" style="text-align: right;">Precision bookkeeping and
+          comprehensive financial reporting tailored to keep your business fully compliant and informed.</span>
+        <a href="/src/pages/accounting.html" class="text-brand-blue font-semibold uppercase hover:text-brand-orange"
+          style="font-size: 12px; letter-spacing: 0.1em; transition: color 300ms ease;">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- 03 — Taxation -->
+    <div class="service-row" tabindex="0" role="button" aria-expanded="false"
+      onclick="window.location.href='/src/pages/taxation.html'">
+      <span class="service-num text-text-secondary font-semibold">03</span>
+      <div class="service-main" style="flex: 1;">
+        <span class="service-title text-text-primary transition-colors duration-300 hover:text-brand-orange"
+          style="display: block;">Taxation</span>
+        <ul class="service-sub-tags" style="list-style: none; padding: 0;">
+          <li class="service-sub-tag">Income Tax</li>
+          <li class="service-sub-tag">Corporate Tax Planning</li>
+          <li class="service-sub-tag">Direct Tax</li>
+          <li class="service-sub-tag">Indirect Tax</li>
+          <li class="service-sub-tag">Litigations</li>
+        </ul>
+      </div>
+      <div class="service-desc" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+        <span class="text-text-secondary font-semibold glass-text" style="text-align: right;">Expert tax planning and
+          compliance frameworks designed to optimize liability across complex regulatory landscapes.</span>
+        <a href="/src/pages/taxation.html" class="text-brand-blue font-semibold uppercase hover:text-brand-orange"
+          style="font-size: 12px; letter-spacing: 0.1em; transition: color 300ms ease;">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- 04 — Audit and Assurance -->
+    <div class="service-row" tabindex="0" role="button" aria-expanded="false"
+      onclick="window.location.href='/src/pages/audit-assurance.html'">
+      <span class="service-num text-text-secondary font-semibold">04</span>
+      <div class="service-main" style="flex: 1;">
+        <span class="service-title text-text-primary transition-colors duration-300 hover:text-brand-orange"
+          style="display: block;">Audit &amp; Assurance</span>
+        <ul class="service-sub-tags" style="list-style: none; padding: 0;">
+          <li class="service-sub-tag">Statutory Audit</li>
+          <li class="service-sub-tag">Internal Audit</li>
+          <li class="service-sub-tag">Tax Audit</li>
+          <li class="service-sub-tag">Risk Advisory</li>
+          <li class="service-sub-tag">Pre Audit</li>
+        </ul>
+      </div>
+      <div class="service-desc" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+        <span class="text-text-secondary font-semibold glass-text" style="text-align: right;">Rigorous financial
+          examinations ensuring transparency, risk mitigation, and stakeholder confidence.</span>
+        <a href="/src/pages/audit-assurance.html"
+          class="text-brand-blue font-semibold uppercase hover:text-brand-orange"
+          style="font-size: 12px; letter-spacing: 0.1em; transition: color 300ms ease;">Learn More →</a>
+      </div>
+    </div>
+
+    <!-- 05 — Corporate Services -->
+    <div class="service-row" tabindex="0" role="button" aria-expanded="false"
+      onclick="window.location.href='/src/pages/corporate-services.html'">
+      <span class="service-num text-text-secondary font-semibold">05</span>
+      <div class="service-main" style="flex: 1;">
+        <span class="service-title text-text-primary transition-colors duration-300 hover:text-brand-orange"
+          style="display: block;">Corporate Services</span>
+        <ul class="service-sub-tags" style="list-style: none; padding: 0;">
+          <li class="service-sub-tag">Company Registration</li>
+          <li class="service-sub-tag">Branch Formation</li>
+          <li class="service-sub-tag">Company Law</li>
+          <li class="service-sub-tag">LLP Formation</li>
+          <li class="service-sub-tag">Company Annual Returns</li>
+          <li class="service-sub-tag">Company Management</li>
+        </ul>
+      </div>
+      <div class="service-desc" style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+        <span class="text-text-secondary font-semibold glass-text" style="text-align: right;">End-to-end corporate
+          structuring, from formation and regulatory compliance to ongoing legal stewardship.</span>
+        <a href="/src/pages/corporate-services.html"
+          class="text-brand-blue font-semibold uppercase hover:text-brand-orange"
+          style="font-size: 12px; letter-spacing: 0.1em; transition: color 300ms ease;">Learn More →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+     PARTNERS 
+     ═══════════════════════════════════════════════════════ -->
+  <style>
+    /* Custom scoped CSS to bypass any broken agent styles */
+    .leadership-grid-custom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      /* Generous breathing room between partners */
+      flex-wrap: wrap;
+      /* Allows neat stacking on mobile devices */
+      margin-top: 20px;
+    }
+
+    .partner-container-custom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 320px;
+      background: transparent !important;
+      /* Forces removal of the ugly solid boxes */
+    }
+
+    .partner-image-custom {
+      width: 260px;
+      height: 300px;
+      /* Enforces a perfect portrait aspect ratio */
+      object-fit: cover;
+      /* Prevents image distortion or squishing */
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      /* Soft, premium floating shadow */
+      margin-bottom: 24px;
+      background-color: transparent;
+    }
+
+    .partner-name-custom {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #0B2B5E;
+      /* Deep Sapphire brand color */
+      margin: 0 0 6px 0;
+    }
+
+    .partner-credentials-custom {
+      font-family: sans-serif;
+      font-size: 13px;
+      color: #5A5A5A;
+      /* Slate Grey */
+      letter-spacing: 1.5px;
+      /* Adds that high-end wide tracking */
+      margin: 0 0 10px 0;
+    }
+
+    .partner-experience-custom {
+      font-family: sans-serif;
+      font-size: 12px;
+      color: #C5A059;
+      /* Champagne Gold */
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin: 0;
+    }
+  </style>
+
+  <section id="partners" class="reveal-on-scroll" aria-label="Partners"
+    style="padding: 10vh 32px; z-index: 10; position: relative; background: transparent;">
+    <h2
+      style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; font-size: 48px; letter-spacing: -0.02em; text-align: center; margin-bottom: 40px; color: #1A1A1A;">
+      Partners
+    </h2>
+
+    <div class="leadership-grid-custom">
+      <!-- Partner 1 -->
+      <div id="partner-1-container" class="partner-container-custom">
+        <img src="/src/pictures/dad.png" alt="CA Deepak Patel" class="partner-image-custom">
+        <h3 class="partner-name-custom">CA Deepak Patel</h3>
+        <p class="partner-credentials-custom">FCA M.Com</p>
+        <p class="partner-experience-custom">EXPERIENCE OF 22 YEARS</p>
+      </div>
+
+      <!-- Partner 2 -->
+      <div id="partner-2-container" class="partner-container-custom">
+        <img src="/src/pictures/uncle.png" alt="CA Nikhil Patel" class="partner-image-custom">
+        <h3 class="partner-name-custom">CA Nikhil Patel</h3>
+        <p class="partner-credentials-custom">FCA M.Com</p>
+        <p class="partner-experience-custom">EXPERIENCE OF 12 YEARS</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+         FOOTER — Dark on light inversion
+         ═══════════════════════════════════════════════════════ -->
+  <style>
+    /* Scoped CSS for Footer Refactor */
+    .footer-section-refactored {
+      background: var(--color-text-primary);
+      color: var(--color-surface-base);
+      padding: 10vh 32px;
+      position: relative;
+      font-family: var(--font-family-ui);
+    }
+
+    .footer-header {
+      font-size: clamp(40px, 6vw, 80px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 0.9;
+      margin-bottom: 60px;
+      text-align: left;
+      font-family: 'Playfair Display', serif;
+      color: #F9F6F0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-map-iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      filter: grayscale(100%) invert(92%) contrast(83%);
+    }
+
+    .footer-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: #F9F6F0;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .footer-contact-item:hover {
+      color: #C5A059;
+    }
+
+    .footer-contact-item img {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      filter: brightness(0) invert(1);
+    }
+
+    .contact-form {
+      width: 100%;
+    }
+
+    .form-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 12px 0;
+      width: 100%;
+      outline: none;
+      margin-bottom: 24px;
+      font-family: inherit;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .form-input:focus {
+      border-bottom-color: #C5A059;
+    }
+
+    .services-wanted-group {
+      margin-bottom: 30px;
+    }
+
+    .services-wanted-label {
+      display: block;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .radio-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .radio-pills input[type="checkbox"] {
+      display: none;
+    }
+
+    .radio-pills label {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      color: #ccc;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .radio-pills input[type="checkbox"]:checked+label {
+      border-color: #C5A059;
+      color: #C5A059;
+      background: rgba(197, 160, 89, 0.05);
+    }
+
+    .form-submit-btn {
+      background: #C5A059;
+      color: #1A1A1A;
+      font-weight: 600;
+      font-family: inherit;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .form-submit-btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+
+  <footer id="lets-connect" class="footer-section-refactored">
+    <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
+      <h2 class="footer-header">LET'S<br>CONNECT</h2>
+
+      <div class="footer-grid">
+        <!-- LEFT COLUMN: MAP + CONTACT INFO -->
+        <div>
+          <iframe src="https://www.google.com/maps?q=Ganesh+Plaza,+Kheda+Road,+Kalikund,+Dholka&output=embed"
+            class="footer-map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <div class="footer-contact-list">
+            <a href="https://www.google.com/maps/search/?api=1&query=Ganesh+Plaza,+F-8,+Kheda+Road,+Kalikund,+Dholka,+Gujarat+382225"
+              target="_blank" class="footer-contact-item">
+              <img src="/src/pictures/location.svg" alt="Location">
+              <span>Ganesh Plaza, F-8, Kheda Road, Kalikund, Dholka, Gujarat 382225</span>
+            </a>
+            <a href="mailto:ca.deepakpatel@gmail.com" class="footer-contact-item">
+              <img src="/src/pictures/mail.svg" alt="Email">
+              <span style="text-transform: lowercase;">ca.deepakpatel@gmail.com</span>
+            </a>
+            <a href="mailto:ca.nikhil311@gmail.com" class="footer-contact-item">
+              <img src="/src/pictures/mail.svg" alt="Email">
+              <span style="text-transform: lowercase;">ca.nikhil311@gmail.com</span>
+            </a>
+            <a href="tel:+919898466115" class="footer-contact-item">
+              <img src="/src/pictures/call.svg" alt="Phone">
+              <span>+91 9898466115</span>
+            </a>
+            <a href="tel:+919974056675" class="footer-contact-item">
+              <img src="/src/pictures/call.svg" alt="Phone">
+              <span>+91 9974056675</span>
+            </a>
+            <div style="margin-top: 16px;">
+              <img src="/src/pictures/ca_white.png" alt="CA Logo" style="height: 60px; width: auto; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: WEB3FORMS -->
+        <div>
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="6f54f2d0-78f3-40a8-ab07-9956a4939529">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <input type="text" name="name" placeholder="Full Name" required class="form-input">
+            <input type="tel" name="phone" placeholder="Phone No." required class="form-input" pattern="[0-9]{10}"
+              maxlength="10" title="Please enter exactly 10 digits">
+            <input type="email" name="email" placeholder="Mail ID" required class="form-input"
+              pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" title="Please enter a valid Gmail address">
+
+            <div class="services-wanted-group">
+              <span class="services-wanted-label">Services Wanted</span>
+              <div class="radio-pills">
+                <input type="checkbox" id="srv-accounting" name="service" value="Accounting">
+                <label for="srv-accounting">Accounting</label>
+
+                <input type="checkbox" id="srv-taxation" name="service" value="Taxation">
+                <label for="srv-taxation">Taxation</label>
+
+                <input type="checkbox" id="srv-audit" name="service" value="Audit & Assurance">
+                <label for="srv-audit">Audit & Assurance</label>
+
+                <input type="checkbox" id="srv-corporate" name="service" value="Corporate Services">
+                <label for="srv-corporate">Corporate Services</label>
+
+                <input type="checkbox" id="srv-management" name="service" value="Management Consultancy">
+                <label for="srv-management">Management Consultancy</label>
+              </div>
+            </div>
+
+            <textarea name="message" rows="4" placeholder="Your Message" required class="form-input"></textarea>
+
+            <button type="submit" class="form-submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script type="module" src="/src/main.ts"></script>
+
+
+  <div id="overlay-menu" class="overlay-menu">
+    <button id="close-menu" style="position:absolute; top:30px; right:30px; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">&times;</button>
+    <a href="/">Home</a>
+    <a href="#services">Services</a>
+    <a href="#partners">Partners</a>
+    <a href="#lets-connect">Let's Connect</a>
+  </div>
+
+  <footer style="background: #0a0a0a; padding: 60px 32px 20px; text-align: center; color: #5A5A5A; font-family: sans-serif; font-size: 13px; border-top: 1px solid #222;">
+    <h3 style="font-family: 'Playfair Display', serif; color: #fff; font-size: 24px; font-weight: 400; margin-bottom: 10px;">CA Deepak Nikhil & Co.</h3>
+    <p style="margin-bottom: 30px;">Focused financial acumen and strategic advisory.</p>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+      <span>&copy; 2026 CA Deepak Nikhil & Co. All rights reserved.</span>
+      <span>Dholka, Gujarat</span>
+    </div>
+  </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const overlay = document.getElementById('overlay-menu');
+    
+    if (menuBtn && overlay) {
+      menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.classList.add('active');
+      });
+    }
+    
+    if (closeBtn && overlay) {
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('active');
+      });
+    }
+    
+    if (overlay) {
+      const links = overlay.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          overlay.classList.remove('active');
+        });
+      });
+    }
+  });
+</script>
+</body>
+
+</html>

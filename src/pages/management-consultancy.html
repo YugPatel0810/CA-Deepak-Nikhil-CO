@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deepak Nikhil & Co. — Management Consultancy" />
+  <link rel="icon" type="image/png" href="/src/pictures/favicon.png" />
+  <title>Deepak Nikhil & Co. - Management Consultancy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body class="bg-surface-base text-text-primary overflow-x-hidden" style="margin: 0; min-height: 100vh;">
+  <!-- WEBGL CANVAS -->
+  <canvas id="webgl-canvas" aria-hidden="true"></canvas>
+
+  <!-- Overlay Menu -->
+  <div id="overlay-menu" class="overlay-menu">
+    <button id="close-menu" style="position:absolute; top:30px; right:30px; background:none; border:none; color:white; font-size:2rem; cursor:pointer;">&times;</button>
+    <nav class="overlay-nav">
+      <a href="/" class="overlay-link">Home</a>
+      <a href="/#services" class="overlay-link">Services</a>
+      <a href="/#partners" class="overlay-link">Partners</a>
+      <a href="/#contact" class="overlay-link">Contact Us</a>
+    </nav>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav" class="fixed top-0 left-0 w-full flex items-center justify-between"
+    style="padding: 16px 32px; z-index: 50; font-family: var(--font-family-ui)" role="navigation" aria-label="Primary">
+    <a href="/" class="uppercase font-semibold flex items-center"
+      style="font-size: 12px; letter-spacing: 0.15em; color: #1A1A1A; gap: 8px; text-decoration: none;">
+      <img src="/src/pictures/ca.png" alt="CA India Logo"
+        style="height: 80px; width: auto; display: inline-block; max-width: 250px; object-fit: contain;" />
+    </a>
+    <button id="menu-btn" class="uppercase font-semibold cursor-pointer bg-transparent border-none hover:text-[#C9A96E]"
+      style="font-size: 12px; letter-spacing: 0.15em; color: #1A1A1A; transition: color 300ms ease;"
+      aria-label="Toggle navigation menu" type="button">
+      <span id="menu-text" class="inline-block transition-transform duration-300">
+        MENU [≡]
+      </span>
+    </button>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header style="padding: 15vh 32px 10vh 32px; z-index: 10; position: relative;">
+    <h1 class="font-serif italic font-medium text-text-primary glass-text"
+      style="font-size: clamp(60px, 8vw, 120px); line-height: 0.9; letter-spacing: -0.02em; margin-bottom: 24px;">
+      Management<br />Consultancy
+    </h1>
+    <p class="glass-text"
+      style="font-family: var(--font-family-ui); font-size: 20px; color: var(--color-brand-blue); max-width: 800px; font-weight: 600; line-height: 1.5; margin-bottom: 48px;">
+      Strategic guidance to optimize operations, enhance efficiency, and drive sustainable growth for your enterprise.
+    </p>
+  </header>
+
+  <!-- DETAILED EXPLANATION -->
+  <section style="padding: 5vh 32px; max-width: 800px; margin: 0 auto; z-index: 10; position: relative;">
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">The Essential Why</h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 40px;">
+      As businesses grow beyond day-to-day operations, financial decisions become more complex and consequential - yet
+      many Indian SMEs and growing enterprises operate without the strategic financial leadership they genuinely need. A
+      full-time Chief Financial Officer can cost ₹50,000 or more per month in salary alone, making it an expense most
+      businesses cannot justify. Simultaneously, lenders now demand detailed CMA (Credit Monitoring Arrangement) reports
+      before sanctioning working capital loans; acquirers and investors expect thorough due diligence before committing
+      capital; and management teams require accurate business valuations for negotiations, restructuring, or exit
+      planning. Without expert management consulting, businesses routinely leave tax efficiencies unexploited, fund
+      flows unmanaged, and strategic opportunities unrealized.
+    </p>
+
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">Our Approach & Expertise
+    </h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 40px;">
+      CA Deepak Nikhil & Co. offers holistic management consultancy designed to give growing businesses the financial
+      intelligence they deserve. Our Virtual CFO service delivers CFO-level expertise on a flexible retainer -
+      encompassing financial planning, budgeting, MIS reporting, cash flow forecasting, regulatory compliance, and
+      investor relations at a fraction of the cost of a full-time hire. We prepare accurate, bank-accepted CMA Reports
+      for working capital and term loan financing, conduct comprehensive due diligence for acquisitions and investments,
+      and provide independent business evaluations for negotiations, disputes, or restructuring. Our Fundflow Management
+      service ensures your working capital cycles are optimized and your financial obligations are consistently met.
+      Strategic advisory engagements help leadership teams build financial strategies aligned with long-term business
+      objectives.
+    </p>
+
+    <h3 class="font-serif text-text-secondary" style="font-size: 28px; margin-bottom: 16px;">The Tangible Benefit</h3>
+    <p
+      style="font-family: var(--font-family-ui); font-size: 18px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 48px;">
+      Our management consultancy clients gain access to the financial foresight of a seasoned CFO without the overhead.
+      They secure bank financing more efficiently with expertly prepared CMA reports, make informed investment and
+      expansion decisions backed by rigorous due diligence, and manage cash flows with precision and confidence. The
+      outcome is a business that is financially stronger, more investor-ready, and positioned for sustainable,
+      profitable growth - with every major financial decision grounded in expert analysis rather than guesswork.
+    </p>
+  </section>
+
+  <!-- SUB-SERVICES -->
+  <section style="padding: 10vh 32px; background-color: rgba(27, 90, 140, 0.03); z-index: 10; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 class="font-serif italic" style="font-size: 40px; color: var(--color-brand-blue); margin-bottom: 48px;">
+        Explore Sub-Services</h2>
+
+      <ul style="list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0;">
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Strategic Advisory</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Fundflow Management</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Virtual CFO Services</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Due Diligence</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          Business Evaluation</li>
+        <li
+          style="font-family: var(--font-family-ui); font-size: 14px; font-weight: 500; color: var(--color-text-secondary); border: 1px solid rgba(0,0,0,0.1); padding: 8px 16px; border-radius: 30px;">
+          CMA Reports</li>
+      </ul>
+    </div>
+  </section>
+
+  <div style="text-align: center; padding: 12vh 20px;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #0B2B5E; margin-bottom: 30px; font-weight: 400; font-style: italic;">Ready to Elevate Your Strategy?</h2>
+  <a href="/index.html#lets-connect" style="background-color: #C5A059; color: #1A1A1A; padding: 14px 36px; text-decoration: none; font-weight: 600; font-family: sans-serif; letter-spacing: 1px; border-radius: 4px; display: inline-block; transition: opacity 0.3s;">BOOK A CONSULTATION</a>
+</div>
+<script type="module" src="/src/main.ts"></script>
+  <footer style="background: #0a0a0a; padding: 60px 32px 20px; text-align: center; color: #5A5A5A; font-family: sans-serif; font-size: 13px; border-top: 1px solid #222;">
+    <h3 style="font-family: 'Playfair Display', serif; color: #fff; font-size: 24px; font-weight: 400; margin-bottom: 10px;">CA Deepak Nikhil & Co.</h3>
+    <p style="margin-bottom: 30px;">Focused financial acumen and strategic advisory.</p>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+      <span>&copy; 2026 CA Deepak Nikhil & Co. All rights reserved.</span>
+      <span>Dholka, Gujarat</span>
+    </div>
+  </footer>
+</body>
+
+</html>
+
