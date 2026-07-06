@@ -291,3 +291,33 @@ if (canvas) {
     { passive: true }
   );
 }
+
+// Mobile Overlay Menu Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-menu');
+  const overlay = document.getElementById('overlay-menu');
+  
+  if (menuBtn && overlay) {
+    menuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      overlay.classList.add('active');
+    });
+  }
+  
+  if (closeBtn && overlay) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      overlay.classList.remove('active');
+    });
+  }
+  
+  if (overlay) {
+    const links = overlay.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        overlay.classList.remove('active');
+      });
+    });
+  }
+});
