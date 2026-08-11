@@ -21,39 +21,6 @@ A modern, elegant web platform for Deepak Nikhil & Co., showcasing comprehensive
 - **Smooth Scrolling**: Lenis
 - **Fonts**: Google Fonts (DM Sans, Playfair Display, Montserrat)
 
-## 📦 Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd "CA DeepakNikhil & CO"
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Build for production:
-```bash
-npm run build
-```
-
-5. Preview production build:
-```bash
-npm run preview
-```
 
 ## 📁 Project Structure
 
@@ -82,25 +49,6 @@ npm run preview
 - **Brand Blue**: #1B5A8C
 - **Brand Green**: #2D8659
 - **Brand Orange**: #E67E22
-
-## 🔧 Configuration
-
-### Tailwind/CSS Variables
-Custom CSS variables are defined in `src/style.css` for consistent theming across the application.
-
-### Vite Configuration
-See `vite.config.ts` for build and development server settings.
-
-## 🚀 Deployment
-
-The project can be deployed to any static hosting service:
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3
-- Any traditional web server
-
-Simply deploy the contents of the `dist/` folder after running `npm run build`.
 
 ## 📝 Services Offered
 
